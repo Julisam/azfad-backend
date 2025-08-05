@@ -1,0 +1,22 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual Environment
+env/
+venv/
+
+# Local Settings
+.env
+local_settings.py
+
+# Database
+db.sqlite3
+
+# Logs
+*.log
+
+# IDE and OS files
+.DS_Store
+Thumbs.db
+.vscode/
