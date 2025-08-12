@@ -3,7 +3,7 @@
 __pycache__/
 
 # Local Settings
-.env
+.env*
 local_settings.py
 play.ipynb
 
