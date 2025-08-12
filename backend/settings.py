@@ -30,8 +30,12 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-^cycf)q+wm_hwp%dbe30o#am*2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True').lower() == 'true'
 
-ALLOWED_HOSTS = ['*']
-
+# ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    "azfad.com.ng",
+    "www.azfad.com.ng",
+    "localhost",
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -144,12 +148,25 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'api.CustomUser'
 
-# # CORS settings
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-#     "http://127.0.0.1:3000",
-# ]
-CORS_ALLOW_ALL_ORIGINS = True
+# CORS settings
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "http://azfad.com.ng",
+    "https://azfad.com.ng",
+    "http://www.azfad.com.ng",
+    "https://www.azfad.com.ng",
+    "http://localhost"
+]
+
+
+# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+# CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
 # REST Framework settings
