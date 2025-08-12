@@ -2,13 +2,10 @@
 *.pyc
 __pycache__/
 
-# Virtual Environment
-env/
-venv/
-
 # Local Settings
 .env
 local_settings.py
+play.ipynb
 
 # Database
 db.sqlite3
