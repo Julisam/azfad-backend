@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
     'api',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +141,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -188,4 +189,8 @@ SIMPLE_JWT = {
 }
 
 STATIC_URL = '/django-static/'
-STATIC_ROOT = '/var/www/azfad/django-static/' 
+STATIC_ROOT = '/var/www/azfad/django-static/'
+
+# Paystack settings
+PAYSTACK_SECRET_KEY = os.getenv('PAYSTACK_SECRET_KEY')
+FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:3000') 

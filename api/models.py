@@ -53,7 +53,7 @@ class Cart(models.Model):
 
     paid = models.BooleanField(default=False)
     paid_at = models.DateTimeField(null=True, blank=True)
-    paid_amount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    payment_reference = models.CharField(max_length=100, null=True, blank=True)
     coupon_amount = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
     
     class Meta:
